@@ -1,0 +1,152 @@
+/* ========================================
+   PROJECT CARD — fiel ao layout de referência
+======================================== */
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeInUp 0.35s ease both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================
+   TÍTULO
+======================================== */
+
+.project-card-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-white);
+    line-height: 1.4;
+}
+
+/* ========================================
+   IMAGEM REAL DO DASHBOARD
+======================================== */
+
+.project-card-image-wrapper {
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    position: relative;
+    background: var(--bg-secondary);
+    transition: border-color var(--transition-med), box-shadow var(--transition-med);
+}
+
+.project-card-image-wrapper:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 22px rgba(139, 92, 246, 0.2);
+}
+
+.project-card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.project-card-image-wrapper:hover .project-card-image {
+    transform: scale(1.015);
+}
+
+/* Overlay de hover — lupa */
+.project-card-img-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-med);
+    color: #fff;
+    font-size: 22px;
+    backdrop-filter: blur(2px);
+}
+
+.project-card-image-wrapper:hover .project-card-img-hover {
+    opacity: 1;
+}
+
+/* Placeholder quando imagem falha */
+.project-card-img-placeholder {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--text-muted);
+    min-height: 140px;
+}
+
+.project-card-image-wrapper.img-error .project-card-img-placeholder {
+    display: flex;
+}
+
+.project-card-image-wrapper.img-error .project-card-img-hover {
+    display: none;
+}
+
+/* ========================================
+   DESCRIÇÃO
+======================================== */
+
+.project-card-desc-block {}
+
+.project-card-desc-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+}
+
+.project-card-desc-text {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   BOTÃO VER DETALHES
+======================================== */
+
+.project-ver-detalhes-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 20px;
+    background: #f5f0e8;
+    border: 1px solid #e8e0d0;
+    border-radius: var(--radius-sm);
+    color: #2a2a2a;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: all var(--transition-med);
+    width: fit-content;
+}
+
+.project-ver-detalhes-btn:hover {
+    background: #fff;
+    border-color: #d0c8b8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   DIVISOR
+======================================== */
+
+.project-divider {
+    height: 1px;
+    background: var(--border-color);
+}

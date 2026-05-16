@@ -1,0 +1,73 @@
+/* ========================================
+   RESET & VARIÁVEIS GLOBAIS
+======================================== */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary:       #0d0d12;
+    --bg-secondary:     #13131a;
+    --bg-card:          #181822;
+    --bg-card-hover:    #1e1e2e;
+
+    --border-color:     rgba(255, 255, 255, 0.07);
+    --border-hover:     rgba(139, 92, 246, 0.4);
+
+    --text-primary:     #e2e2e8;
+    --text-secondary:   #9494a8;
+    --text-muted:       #5a5a72;
+    --text-white:       #ffffff;
+
+    --accent-purple:    #8b5cf6;
+    --accent-purple-2:  #7c3aed;
+    --accent-green:     #10b981;
+
+    --glow-purple:      0 0 20px rgba(139, 92, 246, 0.3);
+
+    --shadow-card:      0 4px 24px rgba(0, 0, 0, 0.4);
+
+    --radius-sm:        6px;
+    --radius-md:        10px;
+    --radius-lg:        14px;
+
+    --font-main:        'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --transition-fast:  0.15s ease;
+    --transition-med:   0.25s ease;
+    --transition-slow:  0.4s ease;
+}
+
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   SCROLLBAR CUSTOMIZADA
+======================================== */
+
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb  { background: rgba(139,92,246,0.45); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-purple); }
+
+/* ========================================
+   UTILITÁRIOS
+======================================== */
+
+a           { color: inherit; text-decoration: none; }
+button      { cursor: pointer; border: none; background: none; font-family: var(--font-main); }
+img         { display: block; max-width: 100%; }

@@ -1,0 +1,44 @@
+/* ========================================
+   CONTACT LIST
+======================================== */
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.contact-icon {
+    font-size: 11px;
+    color: var(--accent-purple);
+    margin-top: 2px;
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+}
+
+.contact-text {
+    font-size: 11px;
+    color: var(--text-secondary);
+    word-break: break-all;
+    line-height: 1.4;
+}
+
+.contact-link {
+    font-size: 11px;
+    color: var(--accent-purple);
+    word-break: break-all;
+    line-height: 1.4;
+    transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: #a78bfa;
+    text-decoration: underline;
+}

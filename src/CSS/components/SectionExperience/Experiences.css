@@ -1,0 +1,60 @@
+/* ========================================
+   EXPERIENCE LIST
+======================================== */
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ========================================
+   EXPERIENCE CARD
+======================================== */
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: all var(--transition-fast);
+}
+
+.experience-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ========================================
+   EXPERIENCE CARGO
+======================================== */
+
+.experience-cargo {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+/* ========================================
+   EXPERIENCE EMPRESA + PERÍODO
+======================================== */
+
+.experience-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.experience-empresa {
+    font-size: 10px;
+    color: var(--text-secondary);
+}
+
+.experience-periodo {
+    font-size: 10px;
+    color: var(--text-muted);
+    white-space: nowrap;
+}

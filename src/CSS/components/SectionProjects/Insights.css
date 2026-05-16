@@ -1,0 +1,214 @@
+/* ========================================
+   INSIGHTS — aba de análises de dados
+======================================== */
+
+/* Header da seção insights */
+.insights-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 14px 14px 0;
+    margin-bottom: 10px;
+}
+
+.insights-titulo {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 2px;
+}
+
+.insights-subtitulo {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.insights-count {
+    font-size: 10px;
+    color: var(--accent-purple);
+    background: rgba(139,92,246,0.1);
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 10px;
+    padding: 2px 8px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Lista de cards */
+.insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 14px 14px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* ========================================
+   INSIGHT CARD
+======================================== */
+
+.insight-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--insight-cor, var(--accent-purple));
+    border-radius: var(--radius-md);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.insight-card:hover {
+    background: rgba(255,255,255,0.035);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.insight-card--destaque {
+    background: rgba(139,92,246,0.04);
+    border-color: rgba(139,92,246,0.25);
+    border-left-color: var(--accent-purple);
+}
+
+/* Header do card */
+.insight-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.insight-categoria {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    border: 1px solid;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.insight-badge-destaque {
+    font-size: 9px;
+    color: #f59e0b;
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 10px;
+    padding: 2px 7px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+}
+
+/* Título */
+.insight-titulo {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-white);
+    line-height: 1.4;
+}
+
+/* Resumo */
+.insight-resumo {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Body com texto + métricas */
+.insight-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.insight-body.has-metricas {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.insight-texto {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    white-space: pre-line;
+    flex: 1;
+}
+
+/* Métricas */
+.insight-metricas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.insight-metrica-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 5px 8px;
+    min-width: 100px;
+}
+
+.insight-metrica-valor {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1;
+}
+
+.insight-metrica-label {
+    font-size: 8.5px;
+    color: var(--text-muted);
+    flex: 1;
+    line-height: 1.2;
+}
+
+.insight-tendencia {
+    font-size: 9px;
+    flex-shrink: 0;
+}
+.insight-tendencia.up      { color: #10b981; }
+.insight-tendencia.down    { color: #ef4444; }
+.insight-tendencia.neutral { color: #f59e0b; }
+
+/* Footer com tags */
+.insight-footer {
+    margin-top: 2px;
+}
+
+.insight-tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.insight-tag {
+    font-size: 9px;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .insight-body.has-metricas {
+        flex-direction: column;
+    }
+    .insight-metricas {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

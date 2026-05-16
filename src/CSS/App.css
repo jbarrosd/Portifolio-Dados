@@ -1,0 +1,619 @@
+/* ========================================
+   PAGE WRAPPER
+======================================== */
+
+/* ========================================
+   PAGE WRAPPER — padding bottom confortável
+======================================== */
+
+.page-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/* ========================================
+   BANNER
+   — replica o original: imagem real de dashboards
+     à esquerda, gradiente roxo cobrindo,
+     selos + texto à direita
+======================================== */
+
+.banner-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: #0d0820;
+    
+    /* Centralizado com proporção nas laterais */
+    width: 96vw;
+    max-width: 1360px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Cantos inferiores arredondados */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/* Imagem real do banner */
+.banner-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.90;
+}
+
+/* Gradiente — desativado para mostrar a imagem do banner */
+.banner-gradient-overlay {
+    display: none;
+}
+
+/* Fundo roxo — desativado */
+.banner-right-bg {
+    display: none;
+}
+
+/* Glows — desativados */
+.banner-glow {
+    display: none;
+}
+
+.banner-glow-2 {
+    display: none;
+}
+
+/* Linha de separação sutil no rodapé do banner */
+.banner-bottom-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(139, 92, 246, 0.3) 40%,
+            rgba(139, 92, 246, 0.1) 100%);
+    z-index: 2;
+}
+
+/* SVG com linhas abstratas (ondas tecnológicas) */
+.banner-svg-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Conteúdo alinhado à direita: selos + título */
+.banner-title-wrap {
+    position: absolute;
+    bottom: 65px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    z-index: 3;
+}
+
+/* Selos decorativos (3 círculos com ícones) */
+.banner-badges {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.banner-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(20, 10, 60, 0.7);
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(200, 180, 255, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 10px rgba(100, 50, 200, 0.25);
+}
+
+.banner-badge i {
+    font-size: 13px;
+}
+
+.banner-badge--highlight {
+    background: rgba(100, 40, 200, 0.4);
+    border-color: rgba(180, 130, 255, 0.5);
+    color: #d4b8ff;
+    box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+}
+
+/* Texto "Especialista em BI & Logística" */
+.banner-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    text-shadow:
+        0 0 16px rgba(180, 130, 255, 0.9),
+        0 0 32px rgba(120, 60, 200, 0.5);
+    white-space: nowrap;
+}
+
+/* ========================================
+   PROFILE BAR
+   — card escuro sólido abaixo do banner,
+     com sombra para efeito de profundidade
+======================================== */
+
+.profile-bar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px 18px 14px;
+    background: rgba(13, 13, 22, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(139, 92, 246, 0.10);
+    border-top: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 5;
+    margin-top: -52px;
+}
+
+.profile-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    flex: 1;
+}
+
+/* ========================================
+   AVATAR — emerge do banner
+======================================== */
+
+.profile-avatar-wrapper {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgba(139, 92, 246, 0.75);
+    overflow: hidden;
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.18),
+        0 0 18px rgba(139, 92, 246, 0.4);
+    margin-top: -30px;
+    /* sobe metade da altura — emerge do banner */
+    background: #1e1040;
+    position: relative;
+    z-index: 6;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Fallback com iniciais */
+.profile-avatar-fallback {
+    display: none;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    border-radius: 50%;
+}
+
+/* ========================================
+   TEXTO DO PERFIL
+======================================== */
+
+.profile-text {
+    flex: 1;
+    padding-top: 2px;
+}
+
+.profile-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 3px;
+}
+
+.profile-subtitle {
+    font-size: 11px;
+    color: #8a8aaa;
+    line-height: 1.45;
+    margin-bottom: 5px;
+}
+
+.profile-status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    flex-wrap: wrap;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px #10b981;
+    animation: pulse-dot 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+.status-text {
+    color: #8a8aaa;
+}
+
+.status-level {
+    color: #55556a;
+}
+
+/* ========================================
+   BOTÃO COMPARTILHAR
+======================================== */
+
+.profile-right {
+    padding-top: 4px;
+}
+
+.share-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: #8a8aaa;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.share-btn:hover {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.35);
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+======================================== */
+
+.main-layout {
+    display: flex;
+    gap: 30px;
+    padding: 14px 0 0;
+    align-items: flex-start;
+    /* sidebar determina a altura natural, projetos scroll interno */
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.sidebar-card:hover {
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+.sidebar-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   SOBRE — expand inline
+======================================== */
+
+.sidebar-about-text {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 6px;
+    white-space: pre-line;
+}
+
+.sobre-extra {
+    margin-top: 4px;
+    animation: fadeSlideIn 0.25s ease;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ver-mais-btn {
+    font-size: 11px;
+    color: var(--accent-purple);
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 4px;
+    transition: color 0.15s;
+}
+
+.ver-mais-btn:hover {
+    color: #a78bfa;
+    text-decoration: underline;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    /* altura será definida via JS para igualar à sidebar */
+}
+
+/* Card de projetos — ocupa toda a altura do layout,
+   scroll interno para alinhar com a sidebar */
+.main-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* ========================================
+   TABS
+======================================== */
+
+.tabs-bar {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 14px;
+    flex-shrink: 0;
+}
+
+.tab-btn {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 12px 14px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent-purple);
+    border-radius: 2px 2px 0 0;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.tab-btn.active {
+    color: var(--text-white);
+}
+
+.tab-btn.active::after {
+    opacity: 1;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-content {
+    display: none;
+    flex: 1;
+    min-height: 0;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+}
+
+/* ========================================
+   PROJETOS — scroll interno, alinhado com sidebar
+======================================== */
+
+.projects-scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 246, 0.3) transparent;
+}
+
+/* ========================================
+   INSIGHTS — estilos em Insights.css
+======================================== */
+
+/* ========================================
+   MODAL DETALHES
+======================================== */
+
+.project-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    backdrop-filter: blur(6px);
+    overflow-y: auto;
+}
+
+.project-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-modal {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    max-width: 740px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 24px 24px 32px;
+    transform: translateY(-14px);
+    transition: transform 0.25s ease;
+}
+
+.project-modal-overlay.active .project-modal {
+    transform: translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.modal-close-btn:hover {
+    color: var(--text-white);
+    border-color: var(--accent-purple);
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 700px) {
+    .main-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .banner-container {
+        height: 120px;
+    }
+
+    .banner-bg-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .profile-name {
+        font-size: 13px;
+    }
+
+    .profile-subtitle {
+        font-size: 10px;
+    }
+
+    .profile-avatar-wrapper {
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+    }
+
+    .banner-container {
+        height: 100px;
+    }
+
+    .banner-title {
+        font-size: 11px;
+    }
+}

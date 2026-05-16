@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Barros | Portfólio</title>
+
+    <link rel="stylesheet" href="../src/CSS/style.css">
+    <link rel="stylesheet" href="../src/CSS/App.css">
+    <link rel="stylesheet" href="../src/CSS/components/NavBar/NavBar.css">
+    <link rel="stylesheet" href="../src/CSS/components/Section/Section.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionSkills/Skills.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionExperience/Experiences.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionExperience/ExperiencesCard.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionEducation/Education.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionProjects/Projects.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionProjects/ProjectsCard.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionProjects/ProjectsDetails.css">
+    <link rel="stylesheet" href="../src/CSS/components/SectionProjects/Insights.css">
+    <link rel="stylesheet" href="../src/CSS/components/Contact/Contact.css">
+    <link rel="stylesheet" href="../src/CSS/components/Footer/Footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- =====================================================
+         BANNER
+         Estrutura: imagem à esquerda + gradiente cobrindo
+         + fundo roxo à direita + selos + título
+    ===================================================== -->
+        <div class="banner-container">
+
+            <!-- Imagem de fundo (dashboards de logística) — lado esquerdo -->
+            <img class="banner-bg-image" src="../src/imgs/banner.jpg" alt="" onerror="this.style.display='none'">
+
+            <!-- Camada de fundo roxo/azul escuro no lado direito -->
+            <div class="banner-right-bg"></div>
+
+            <!-- Gradiente de transição: fade da imagem para o roxo -->
+            <div class="banner-gradient-overlay"></div>
+
+            <!-- Brilhos de glow roxo -->
+            <div class="banner-glow"></div>
+            <div class="banner-glow-2"></div>
+
+            <!-- Linhas abstratas SVG (ondas tecnológicas) -->
+            <svg class="banner-svg-lines" viewBox="0 0 820 158" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <!-- Ondas curvas suaves -->
+                <path d="M350,158 Q450,80 600,100 Q720,115 820,60" stroke="rgba(139,92,246,0.20)" stroke-width="1.2"
+                    fill="none" />
+                <path d="M380,158 Q480,70 630,95 Q740,112 820,40" stroke="rgba(100,140,255,0.13)" stroke-width="1"
+                    fill="none" />
+                <path d="M420,158 Q500,90 650,108 Q750,120 820,80" stroke="rgba(180,120,255,0.10)" stroke-width="0.8"
+                    fill="none" />
+                <!-- Pontos brilhantes decorativos -->
+                <circle cx="480" cy="72" r="1.5" fill="rgba(180,140,255,0.55)" />
+                <circle cx="560" cy="55" r="1" fill="rgba(140,180,255,0.45)" />
+                <circle cx="660" cy="68" r="1.5" fill="rgba(180,130,255,0.50)" />
+                <circle cx="730" cy="48" r="1" fill="rgba(200,160,255,0.40)" />
+                <circle cx="790" cy="62" r="0.8" fill="rgba(160,120,255,0.60)" />
+            </svg>
+
+            <!-- Linha inferior do banner -->
+            <div class="banner-bottom-line"></div>
+
+            <!-- Lado direito: selos + título -->
+            <div class="banner-title-wrap">
+                <div class="banner-badges">
+                    <div class="banner-badge banner-badge--highlight" title="SQL Server Avançado">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="banner-badge banner-badge--highlight" title="Design de Dashboards com Figma">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="banner-badge banner-badge--highlight" title="BI & Logística">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                </div>
+                <span class="banner-title">Analista em BI &amp; Logística</span>
+            </div>
+
+        </div><!-- /banner-container -->
+
+        <!-- =====================================================
+         PROFILE BAR
+         Card escuro sólido com sombra — fica "flutuando"
+         abaixo do banner, criando profundidade visual
+    ===================================================== -->
+        <div class="profile-bar">
+            <div class="profile-left">
+                <!-- Avatar emerge do banner (margin-top negativo) -->
+                <div class="profile-avatar-wrapper">
+                    <img class="profile-avatar" src="../src/imgs/jean.jpeg" alt="Jean Barros" onerror="this.style.display='none';
+                              this.nextElementSibling.style.display='flex'">
+                    <div class="profile-avatar-fallback">JB</div>
+                </div>
+
+                <div class="profile-text">
+                    <h1 class="profile-name">Jean Barros</h1>
+                    <p class="profile-subtitle">
+                        Analista de Dados | Logística | Power BI | SQL | Excel
+                    </p>
+                    <div class="profile-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Disponível para receber oferta de emprego</span>
+                        <span class="status-level">• Queimados/RJ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-right">
+                <button class="share-btn" id="shareBtn" title="Compartilhar">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+            </div>
+        </div><!-- /profile-bar -->
+
+        <!-- =====================================================
+         LAYOUT PRINCIPAL
+    ===================================================== -->
+        <div class="main-layout">
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+
+                <!-- Sobre -->
+                <section class="sidebar-card" id="sectionSobre">
+                    <h2 class="sidebar-section-title">Sobre</h2>
+                    <p class="sidebar-about-text" id="sobreResumo">Possuo experiência como Analista de Dados na área de
+                        Logística e através das habilidades em análise de dados consegui otimizar os processos
+                        logísticos nas empresas em que atuo.</p>
+                    <div class="sobre-extra" id="sobreExtra" style="display:none;">
+                        <p class="sidebar-about-text">Durante minha trajetória, aprimorei minha capacidade de
+                            interpretar dados e criar soluções eficazes de controle para a melhoria contínua das
+                            operações logísticas.</p>
+                        <p class="sidebar-about-text">Utilizo ferramentas como Power BI e Excel para extrair, transformar
+                            e visualizar dados, criando relatórios e dashboards que oferecem insights valiosos para a
+                            equipe de gestão e impulsionam a definição de KPIs e indicadores de desempenho relevantes.
+                        </p>
+                        <p class="sidebar-about-text">
+                            ✅ Tenho experiência em:
+                            • Power BI;
+                            • SQL;
+                            • Power Query;
+                            • DAX
+
+                            📌 Possuo habilidades em:
+                            • Data Storytelling;
+                            • Visualização de Dados;
+                            • Design de Dashboards;
+                            • Figma
+                        </p>
+                    </div>
+                    <button class="ver-mais-btn" id="verMaisBtn">Ver mais</button>
+                </section>
+
+                <!-- Contato -->
+                <section class="sidebar-card" id="sectionContato">
+                    <h2 class="sidebar-section-title">Informações de contato</h2>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span class="contact-text">jeanbarrosd@outlook.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-text">(21) 99542-1917</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin contact-icon"></i>
+                            <a href="https://www.linkedin.com/in/jean-barros" target="_blank"
+                                class="contact-link">
+                                https://www.linkedin.com/in/jean/
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="sidebar-card" id="sectionSkills">
+                    <h2 class="sidebar-section-title">Skills</h2>
+                    <div class="skills-list" id="skillsList"></div>
+                </section>
+
+                <!-- Experiência -->
+                <section class="sidebar-card" id="sectionExperiencia">
+                    <h2 class="sidebar-section-title">Experiência profissional</h2>
+                    <div class="experience-list" id="experienceList"></div>
+                </section>
+
+                <!-- Formação -->
+                <section class="sidebar-card" id="sectionFormacao">
+                    <h2 class="sidebar-section-title">Formação acadêmica</h2>
+                    <div class="education-list" id="educationList"></div>
+                </section>
+
+            </aside><!-- /sidebar -->
+
+            <!-- CONTEÚDO PRINCIPAL -->
+            <main class="main-content" id="mainContent">
+                <section class="main-card" id="sectionProjetos">
+                    <div class="tabs-bar">
+                        <button class="tab-btn active" data-tab="projetos">Projetos</button>
+                        <button class="tab-btn" data-tab="insights">Insights</button>
+                    </div>
+                    <div class="tab-content active" id="tab-projetos">
+                        <div class="projects-scroll-container" id="projectsContainer"></div>
+                    </div>
+                    <div class="tab-content" id="tab-insights">
+                        <div id="insightsContainer"></div>
+                    </div>
+                </section>
+            </main>
+
+        </div><!-- /main-layout -->
+
+    </div><!-- /page-wrapper -->
+
+    <!-- MODAL DETALHES DO PROJETO -->
+    <div class="project-modal-overlay" id="projectModalOverlay">
+        <div class="project-modal" id="projectModal">
+            <button class="modal-close-btn" id="modalCloseBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content-inner" id="modalContentInner"></div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../src/JS/data/Bios.js"></script>
+    <script src="../src/JS/themes/Themes.js"></script>
+    <script src="../src/JS/animation/motion.js"></script>
+    <script src="../src/JS/components/NavBar/NavBar.js"></script>
+    <script src="../src/JS/components/Section/Section.js"></script>
+    <script src="../src/JS/components/SectionSkills/Skills.js"></script>
+    <script src="../src/JS/components/SectionExperience/ExperiencesCard.js"></script>
+    <script src="../src/JS/components/SectionExperience/Experiences.js"></script>
+    <script src="../src/JS/components/SectionProjects/ProjectsDetails.js"></script>
+    <script src="../src/JS/components/SectionProjects/ProjectsCard.js"></script>
+    <script src="../src/JS/components/SectionProjects/Projects.js"></script>
+    <script src="../src/JS/components/SectionProjects/Insights.js"></script>
+    <script src="../src/JS/components/SectionEducation/Education.js"></script>
+    <script src="../src/JS/components/Contact/Contact.js"></script>
+    <script src="../src/JS/components/Footer/Footer.js"></script>
+    <script src="../src/JS/App.js"></script>
+
+</body>
+
+</html>

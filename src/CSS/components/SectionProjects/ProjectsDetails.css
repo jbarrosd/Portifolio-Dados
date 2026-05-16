@@ -1,0 +1,219 @@
+/* ========================================
+   MODAL INTERNO
+======================================== */
+
+.modal-content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ========================================
+   TÍTULO DO MODAL
+======================================== */
+
+.modal-project-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-white);
+    padding-right: 36px;
+    line-height: 1.3;
+}
+
+/* ========================================
+   POWER BI CONTAINER
+======================================== */
+
+.pbi-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #000;
+}
+
+/* ========================================
+   ABAS DE PÁGINAS POWER BI
+======================================== */
+
+.pbi-tabs {
+    display: flex;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 10px;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.pbi-tab-btn {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 8px 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: color var(--transition-fast);
+    font-family: var(--font-main);
+}
+
+.pbi-tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent-purple);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.pbi-tab-btn.active {
+    color: var(--text-white);
+}
+
+.pbi-tab-btn.active::after {
+    opacity: 1;
+}
+
+.pbi-tab-btn:hover {
+    color: var(--text-primary);
+}
+
+/* ========================================
+   FRAMES WRAPPER
+======================================== */
+
+.pbi-frames-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* ========================================
+   FRAME INDIVIDUAL
+======================================== */
+
+.pbi-frame-wrapper {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding-top: 60%;      /* aspect ratio 5:3 */
+    background: #0a0a14;
+}
+
+.pbi-frame-wrapper.active {
+    display: block;
+}
+
+.pbi-iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* ========================================
+   LOADING DO POWER BI
+======================================== */
+
+.pbi-loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 12px;
+    background: #0a0a14;
+    z-index: 1;
+}
+
+.pbi-loading i {
+    font-size: 20px;
+    color: var(--accent-purple);
+}
+
+/* ========================================
+   BOTÃO ACESSAR PROJETO
+======================================== */
+
+.modal-access-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 18px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-med);
+    border: none;
+    font-family: var(--font-main);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.modal-access-btn:hover {
+    background: linear-gradient(135deg, #d97706, #b45309);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.35);
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   SEÇÕES DE TEXTO DO MODAL
+======================================== */
+
+.modal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal-section-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.modal-section-text {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   SKILLS NO MODAL
+======================================== */
+
+.modal-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.modal-skill-tag {
+    padding: 3px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 10px;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    transition: all var(--transition-fast);
+}
+
+.modal-skill-tag:hover {
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+}

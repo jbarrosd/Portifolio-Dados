@@ -1,0 +1,25 @@
+/* ========================================
+   PROJECTS CONTAINER — scroll interno
+======================================== */
+
+.projects-scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139,92,246,0.3) transparent;
+}
+
+/* ========================================
+   INSIGHTS CONTAINER — mesmo scroll
+======================================== */
+
+#insightsContainer {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
