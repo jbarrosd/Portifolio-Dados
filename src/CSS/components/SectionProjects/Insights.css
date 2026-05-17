@@ -12,19 +12,19 @@
 }
 
 .insights-titulo {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text-white);
     margin-bottom: 2px;
 }
 
 .insights-subtitulo {
-    font-size: 10px;
+    font-size: 13px;
     color: var(--text-muted);
 }
 
 .insights-count {
-    font-size: 10px;
+    font-size: 13px;
     color: var(--accent-purple);
     background: rgba(139,92,246,0.1);
     border: 1px solid rgba(139,92,246,0.2);
@@ -83,7 +83,7 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 600;
     padding: 3px 8px;
     border-radius: 10px;
@@ -93,7 +93,7 @@
 }
 
 .insight-badge-destaque {
-    font-size: 9px;
+    font-size: 12px;
     color: #f59e0b;
     background: rgba(245,158,11,0.1);
     border: 1px solid rgba(245,158,11,0.25);
@@ -107,7 +107,7 @@
 
 /* Título */
 .insight-titulo {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-white);
     line-height: 1.4;
@@ -115,7 +115,7 @@
 
 /* Resumo */
 .insight-resumo {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -134,7 +134,7 @@
 }
 
 .insight-texto {
-    font-size: 10.5px;
+    font-size: 13.5px;
     color: var(--text-muted);
     line-height: 1.65;
     white-space: pre-line;
@@ -161,21 +161,21 @@
 }
 
 .insight-metrica-valor {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text-white);
     line-height: 1;
 }
 
 .insight-metrica-label {
-    font-size: 8.5px;
+    font-size: 11.5px;
     color: var(--text-muted);
     flex: 1;
     line-height: 1.2;
 }
 
 .insight-tendencia {
-    font-size: 9px;
+    font-size: 12px;
     flex-shrink: 0;
 }
 .insight-tendencia.up      { color: #10b981; }
@@ -194,7 +194,7 @@
 }
 
 .insight-tag {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--text-muted);
     background: rgba(255,255,255,0.04);
     border: 1px solid var(--border-color);

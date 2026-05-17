@@ -10,8 +10,15 @@
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ========================================
@@ -19,7 +26,7 @@
 ======================================== */
 
 .project-card-title {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-white);
     line-height: 1.4;
@@ -68,7 +75,7 @@
     opacity: 0;
     transition: opacity var(--transition-med);
     color: #fff;
-    font-size: 22px;
+    font-size: 25px;
     backdrop-filter: blur(2px);
 }
 
@@ -83,7 +90,7 @@
     inset: 0;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 35px;
     color: var(--text-muted);
     min-height: 140px;
 }
@@ -103,14 +110,14 @@
 .project-card-desc-block {}
 
 .project-card-desc-label {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 3px;
 }
 
 .project-card-desc-text {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -123,23 +130,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 7px 20px;
-    background: #f5f0e8;
-    border: 1px solid #e8e0d0;
-    border-radius: var(--radius-sm);
-    color: #2a2a2a;
-    font-size: 11px;
+    width: 120px;
+    height: 48px;
+    background: linear-gradient(to right, #DEC6AB, #F4F1EE);
+    border: none;
+    border-radius: 8px;
+    color: #111827;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
-    font-family: var(--font-main);
+    font-family: var(--font-main), 'Inter', sans-serif;
     transition: all var(--transition-med);
-    width: fit-content;
 }
 
 .project-ver-detalhes-btn:hover {
-    background: #fff;
-    border-color: #d0c8b8;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(222, 198, 171, 0.6);
+    transform: translateY(-1px);
 }
 
 /* ========================================

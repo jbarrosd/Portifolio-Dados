@@ -126,7 +126,7 @@
 }
 
 .banner-badge i {
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .banner-badge--highlight {
@@ -138,7 +138,7 @@
 
 /* Texto "Especialista em BI & Logística" */
 .banner-title {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 0.3px;
@@ -213,7 +213,7 @@
     inset: 0;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
     color: #fff;
     background: linear-gradient(135deg, #8b5cf6, #6d28d9);
@@ -230,7 +230,7 @@
 }
 
 .profile-name {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.2;
@@ -238,7 +238,7 @@
 }
 
 .profile-subtitle {
-    font-size: 11px;
+    font-size: 14px;
     color: #8a8aaa;
     line-height: 1.45;
     margin-bottom: 5px;
@@ -248,7 +248,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 10px;
+    font-size: 13px;
     flex-wrap: wrap;
 }
 
@@ -297,7 +297,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
     color: #8a8aaa;
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -348,7 +348,7 @@
 }
 
 .sidebar-section-title {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 10px;
@@ -359,7 +359,7 @@
 ======================================== */
 
 .sidebar-about-text {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.65;
     margin-bottom: 6px;
@@ -384,7 +384,7 @@
 }
 
 .ver-mais-btn {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--accent-purple);
     font-weight: 500;
     background: none;
@@ -437,7 +437,7 @@
 }
 
 .tab-btn {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-secondary);
     padding: 12px 14px;
@@ -558,7 +558,7 @@
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
-    font-size: 11px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -596,11 +596,11 @@
 
 @media (max-width: 460px) {
     .profile-name {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .profile-subtitle {
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .profile-avatar-wrapper {
@@ -614,6 +614,6 @@
     }
 
     .banner-title {
-        font-size: 11px;
+        font-size: 14px;
     }
 }

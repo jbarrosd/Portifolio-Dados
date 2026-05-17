@@ -21,7 +21,7 @@ O portfólio foi estruturado em abas dinâmicas e seções bem definidas para fa
 ### 👤 1. Perfil e Header
 A área de apresentação inicial conta com um banner corporativo estilizado e informações de contato rápido.
 
-![Perfil e Header](./src/assets/Perfil.JPG)
+![Perfil e Header](./src/assets/Perfil.jpg)
 
 - **Objetivo:** Fornecer um resumo imediato de quem eu sou, minhas principais competências (Power BI, SQL, Excel, Logística) e status de disponibilidade profissional.
 - **Destaque:** Interface fluida com efeito *glassmorphism* flutuante e design responsivo, adaptando-se perfeitamente a diferentes telas, criando uma primeira impressão memorável.
