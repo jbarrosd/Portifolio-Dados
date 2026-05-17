@@ -42,10 +42,12 @@ const PROJETOS = [
         id: 1,
         titulo: 'Dashboard Comsumy Energy',
         descricao: 'Você é da área de Supply Chain, você sabe exatamente como está a eficiência das suas entregas? Sabe quais rotas e períodos onde há mais atrasos?',
-        imagemCapa: '../src/imgs/dashboard-consumy-energy.png',
-        imagemCapa: '../src/imgs/dashboard-consumy-energy1.png',
-        imagemCapa: '../src/imgs/dashboard-consumy-energy2.png',
-        imagemCapa: '../src/imgs/dashboard-consumy-energy3.png',
+        imagensCapa: [
+            '../src/imgs/dashboard-consumy-energy.PNG',
+            '../src/imgs/dashboard-consumy-energy1.PNG',
+            '../src/imgs/dashboard-consumy-energy2.PNG',
+            '../src/imgs/dashboard-consumy-energy3.PNG'
+        ],
         linkExterno: 'https://app.powerbi.com/view?r=eyJrIjoiZDhiZGYzNmItMmFjYS00NmJkLWJmODQtZmMwZWNhMGMzYTJiIiwidCI6ImM1MjQ3ODIyLTc2N2YtNDQwMS1hYjQyLWIyOTRkM2I4NjFiZSJ9',
         powerBiFrames: [
             'https://app.powerbi.com/view?r=eyJrIjoiZDhiZGYzNmItMmFjYS00NmJkLWJmODQtZmMwZWNhMGMzYTJiIiwidCI6ImM1MjQ3ODIyLTc2N2YtNDQwMS1hYjQyLWIyOTRkM2I4NjFiZSJ9',
@@ -61,7 +63,9 @@ const PROJETOS = [
         id: 2,
         titulo: 'Dashboard Performance Comercial',
         descricao: 'Esse dashboard foi desenvolvido para Gestores e supervisores da Área Comercial de um Marketplace. Possui uma interface interativa, permitindo que os usuários selecionem filtros e visualizem diferentes análises de acordo com seus interesses.',
-        imagemCapa: '../src/imgs/dashboard-comercial.png',
+        imagensCapa: [
+            '../src/imgs/dashboard-comercial.png'
+        ],
         linkExterno: '#',
         powerBiFrames: [
             'https://app.powerbi.com/view?r=eyJrIjoiNzkwYjk3N2EtMjM3OC00OWUzLTljMDQtMGYxMmExNGRkYmRiIiwidCI6ImM1MjQ3ODIyLTc2N2YtNDQwMS1hYjQyLWIyOTRkM2I4NjFiZSJ9',
@@ -77,9 +81,11 @@ const PROJETOS = [
         id: 3,
         titulo: 'Dashboard de People Analytics',
         descricao: 'Painel analítico focado em dados de pessoas e RH, permitindo visualizar indicadores estratégicos de gestão de pessoas, turnover, headcount e performance de equipes.',
-        imagemCapa: '../src/imgs/dashboard-people-analytics.png',
-        imagemCapa: '../src/imgs/dashboard-people-analytics2.png',
-        imagemCapa: '../src/imgs/dashboard-people-analytics3.png',
+        imagensCapa: [
+            '../src/imgs/dashboard-people-analytics.PNG',
+            '../src/imgs/dashboard-people-analytics2.PNG',
+            '../src/imgs/dashboard-people-analytics3.PNG'
+        ],
         
         linkExterno: '#',
         powerBiFrames: [

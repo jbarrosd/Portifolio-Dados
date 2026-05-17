@@ -53,11 +53,49 @@
 }
 
 .project-card-image {
+    min-width: 100%;
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
     transition: transform var(--transition-slow);
+}
+
+/* Estilos específicos para o carrossel (slide) */
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Bolinhas de navegação (dots) */
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #DEC6AB;
+    transform: scale(1.3);
+}
+
+.project-card-image-wrapper:hover .carousel-track {
+    /* Desativa o leve scale do hover da imagem em carrosseis pra não bugar o slide? Na verdade deixei só no .project-card-image se for único */
 }
 
 .project-card-image-wrapper:hover .project-card-image {

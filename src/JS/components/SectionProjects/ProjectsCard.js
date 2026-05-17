@@ -16,14 +16,26 @@ function createProjectCard(projeto, index, total) {
 
             <h3 class="project-card-title">${projeto.titulo}</h3>
 
-            <div class="project-card-image-wrapper"
+            <div class="project-card-image-wrapper ${projeto.imagensCapa && projeto.imagensCapa.length > 1 ? 'has-carousel' : ''}"
                  onclick="openProjectModal(${projeto.id})"
                  title="Ver detalhes">
-                <img class="project-card-image"
-                     src="${projeto.imagemCapa}"
-                     alt="${projeto.titulo}"
-                     loading="lazy"
-                     onerror="this.parentElement.classList.add('img-error'); this.style.display='none'">
+                 
+                <div class="carousel-track">
+                    ${projeto.imagensCapa ? projeto.imagensCapa.map((img, i) => `
+                        <img class="project-card-image"
+                             src="${img}"
+                             alt="${projeto.titulo}"
+                             loading="lazy"
+                             onerror="this.parentElement.parentElement.classList.add('img-error'); this.style.display='none'">
+                    `).join('') : ''}
+                </div>
+                
+                ${projeto.imagensCapa && projeto.imagensCapa.length > 1 ? `
+                <div class="carousel-dots">
+                    ${projeto.imagensCapa.map((_, i) => `<span class="carousel-dot ${i === 0 ? 'active' : ''}"></span>`).join('')}
+                </div>
+                ` : ''}
+
                 <div class="project-card-img-placeholder">
                     <i class="fas fa-chart-bar"></i>
                 </div>

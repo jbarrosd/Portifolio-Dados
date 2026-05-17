@@ -35,9 +35,32 @@ function initTabs() {
     });
 }
 
+function initCarousels() {
+    const wrappers = document.querySelectorAll('.project-card-image-wrapper.has-carousel');
+    
+    wrappers.forEach(wrapper => {
+        const track = wrapper.querySelector('.carousel-track');
+        const images = wrapper.querySelectorAll('.project-card-image');
+        const dots = wrapper.querySelectorAll('.carousel-dot');
+        if (images.length <= 1) return;
+        
+        let currentIndex = 0;
+        
+        setInterval(() => {
+            if (dots.length) dots[currentIndex].classList.remove('active');
+            
+            currentIndex = (currentIndex + 1) % images.length;
+            
+            if (track) track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            if (dots.length) dots[currentIndex].classList.add('active');
+        }, 3000); // 3 segundos
+    });
+}
+
 const Projects = {
     init() {
         renderProjects();
         initTabs();
+        initCarousels();
     }
 };
