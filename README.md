@@ -21,7 +21,7 @@ O portfólio foi estruturado em abas dinâmicas e seções bem definidas para fa
 ### 👤 1. Perfil e Header
 A área de apresentação inicial conta com um banner corporativo estilizado e informações de contato rápido.
 
-![Perfil e Header](./src/assets/Perfil.jpg)
+![Perfil e Header](./src/assets/Perfil.JPG)
 
 - **Objetivo:** Fornecer um resumo imediato de quem eu sou, minhas principais competências (Power BI, SQL, Excel, Logística) e status de disponibilidade profissional.
 - **Destaque:** Interface fluida com efeito *glassmorphism* flutuante e design responsivo, adaptando-se perfeitamente a diferentes telas, criando uma primeira impressão memorável.
@@ -80,12 +80,12 @@ O desenvolvimento deste portfólio web priorizou a performance, acessibilidade e
 ## 👨‍💻 Sobre o Desenvolvedor
 
 **Jean Barros**
-*Analista de Dados | Especialista em Logística, Supply Chain e BI*
+*Analista de Dados | Logística e BI*
 
 Sou um profissional apaixonado por resolver problemas complexos e focado em transformar dados brutos em decisões estratégicas e insights acionáveis. Com forte atuação em *Supply Chain* e na análise profunda de indicadores operacionais (OTIF, OCT, Gestão de Custos), meu objetivo é sempre otimizar processos, identificar oportunidades de melhoria e reduzir custos operacionais através da inteligência de dados.
 
 📍 **Localização:** Queimados/RJ, Brasil
-🟢 **Status:** Disponível para receber ofertas de emprego.
+🟢 **Status:** .
 
 ---
 *Desenvolvido com 💻, ☕ e muita dedicação.*
