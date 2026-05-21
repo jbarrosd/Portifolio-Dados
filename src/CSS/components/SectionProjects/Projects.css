@@ -23,3 +23,15 @@
     overflow-y: auto;
     min-height: 0;
 }
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 700px) {
+    .projects-scroll-container {
+        padding: 16px 12px;
+        gap: 24px;
+        overflow-y: visible;
+    }
+}

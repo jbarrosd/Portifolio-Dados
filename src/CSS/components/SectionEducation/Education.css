@@ -57,3 +57,20 @@
     color: var(--text-muted);
     white-space: nowrap;
 }
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 480px) {
+    .education-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .education-periodo {
+        white-space: normal;
+    }
+}
+

@@ -10,6 +10,14 @@
 
 const Footer = {
     init() {
-        // Footer não visível no layout atual (espelha o original)
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
     }
 };

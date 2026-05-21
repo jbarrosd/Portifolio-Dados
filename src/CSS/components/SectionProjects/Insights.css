@@ -203,6 +203,16 @@
 }
 
 /* Responsivo */
+@media (max-width: 700px) {
+    .insights-list {
+        padding: 0 12px 12px;
+        overflow-y: visible;
+    }
+    .insights-header {
+        padding: 14px 12px 0;
+    }
+}
+
 @media (max-width: 500px) {
     .insight-body.has-metricas {
         flex-direction: column;

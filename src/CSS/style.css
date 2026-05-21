@@ -9,12 +9,12 @@
 }
 
 :root {
-    --bg-primary:       #0d0d12;
-    --bg-secondary:     #13131a;
-    --bg-card:          #181822;
-    --bg-card-hover:    #1e1e2e;
+    --bg-primary:       #06060a;
+    --bg-secondary:     #0a0a10;
+    --bg-card:          #0f0f18;
+    --bg-card-hover:    #151522;
 
-    --border-color:     rgba(255, 255, 255, 0.07);
+    --border-color:     rgba(255, 255, 255, 0.05);
     --border-hover:     rgba(139, 92, 246, 0.4);
 
     --text-primary:     #e2e2e8;
@@ -28,7 +28,7 @@
 
     --glow-purple:      0 0 20px rgba(139, 92, 246, 0.3);
 
-    --shadow-card:      0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow-card:      0 8px 32px rgba(0, 0, 0, 0.6);
 
     --radius-sm:        6px;
     --radius-md:        10px;

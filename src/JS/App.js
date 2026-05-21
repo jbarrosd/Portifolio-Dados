@@ -12,6 +12,13 @@ function alignProjectsToSidebar() {
     const mainContent = document.querySelector('.main-content');
     if (!sidebar || !mainContent) return;
 
+    // Em telas mobile, os componentes ficam empilhados em coluna,
+    // então a seção de projetos não deve ter altura restrita à sidebar.
+    if (window.innerWidth <= 700) {
+        mainContent.style.maxHeight = 'none';
+        return;
+    }
+
     // Espera layout renderizar
     requestAnimationFrame(function() {
         const sidebarHeight = sidebar.offsetHeight;

@@ -159,7 +159,7 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 12px 18px 14px;
-    background: rgba(13, 13, 22, 0.55);
+    background: rgba(8, 8, 14, 0.65);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border: 1px solid rgba(139, 92, 246, 0.10);
@@ -455,14 +455,14 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--accent-purple);
+    background: #DEC6AB;
     border-radius: 2px 2px 0 0;
     opacity: 0;
     transition: opacity 0.15s;
 }
 
 .tab-btn.active {
-    color: var(--text-white);
+    color: #DEC6AB;
 }
 
 .tab-btn.active::after {
@@ -470,7 +470,7 @@
 }
 
 .tab-btn:hover {
-    color: var(--text-primary);
+    color: #DEC6AB;
 }
 
 .tab-content {
@@ -575,28 +575,198 @@
    RESPONSIVIDADE
 ======================================== */
 
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Ajuste da profile-bar para virar um card vertical alinhado à esquerda */
+    .profile-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px;
+        margin-top: -30px;
+        border-radius: var(--radius-md);
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        box-shadow: var(--shadow-card);
+    }
+
+    .profile-left {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 16px;
+        width: 100%;
+    }
+
+    /* Foto no topo esquerdo com cantos arredondados de container (12px) */
+    .profile-avatar-wrapper {
+        margin-top: 0;
+        align-self: flex-start;
+        width: 72px;
+        height: 72px;
+        border-radius: 12px;
+        border: 1.5px solid rgba(222, 198, 171, 0.4);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .profile-avatar {
+        border-radius: 12px;
+    }
+
+    .profile-avatar-fallback {
+        border-radius: 12px;
+        font-size: 24px;
+    }
+
+    .profile-text {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Nome destacado */
+    .profile-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text-white);
+        margin-bottom: 2px;
+    }
+
+    /* Cargo e especialidades */
+    .profile-subtitle {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.5;
+        margin-bottom: 4px;
+    }
+
+    /* Status e Cidade abaixo */
+    .profile-status {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        font-size: 13.5px;
+    }
+
+    .status-dot {
+        display: none;
+    }
+
+    .status-text {
+        color: #DEC6AB;
+        font-weight: 500;
+    }
+
+    .status-level {
+        color: var(--text-muted);
+        padding-left: 0;
+    }
+
+    /* Botão compartilhar posicionado de forma absoluta no canto inferior direito */
+    .profile-right {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        padding-top: 0;
+    }
+
+    .share-btn {
+        border: none;
+        background: none;
+        color: #DEC6AB;
+        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        border-radius: 50%;
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .share-btn:hover {
+        color: #ffffff;
+        background: rgba(222, 198, 171, 0.1);
+        border-color: transparent;
+        box-shadow: none;
+        transform: scale(1.05);
+    }
+}
+
 @media (max-width: 700px) {
     .main-layout {
         flex-direction: column;
         align-items: stretch;
+        gap: 16px;
     }
 
     .sidebar {
         width: 100%;
+        gap: 16px;
+    }
+
+    .sidebar-card {
+        padding: 20px;
+    }
+
+    .main-card {
+        padding: 20px 0;
     }
 
     .banner-container {
         height: 120px;
+        width: 100%;
+        left: 0;
+        transform: none;
+        border-radius: var(--radius-md);
     }
 
     .banner-bg-image {
         width: 100%;
     }
+
+    .banner-title-wrap {
+        bottom: 12px;
+        right: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .project-modal-overlay {
+        padding: 10px 8px;
+    }
+
+    .project-modal {
+        padding: 18px 16px 24px;
+        border-radius: var(--radius-md);
+    }
+
+    .modal-close-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .modal-project-title {
+        font-size: 18px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-card {
+        padding: 16px;
+    }
 }
 
 @media (max-width: 460px) {
     .profile-name {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .profile-subtitle {
@@ -604,9 +774,8 @@
     }
 
     .profile-avatar-wrapper {
-        width: 50px;
-        height: 50px;
-        margin-top: -25px;
+        width: 60px;
+        height: 60px;
     }
 
     .banner-container {
@@ -616,4 +785,27 @@
     .banner-title {
         font-size: 14px;
     }
+
+    .banner-title-wrap {
+        bottom: 8px;
+        right: 12px;
+        gap: 4px;
+    }
+
+    .banner-badge {
+        width: 28px;
+        height: 28px;
+    }
+
+    .banner-badge i {
+        font-size: 12px;
+    }
 }
+
+@media (max-width: 360px) {
+    .page-wrapper {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
